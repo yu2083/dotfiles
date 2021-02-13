@@ -3,6 +3,7 @@ set number
 set hlsearch
 set ignorecase
 set smartcase
+set clipbord=unnamed
 
 let mapleader = "\<Space>"
 
@@ -26,10 +27,20 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
+
+nnoremap J 10j
+nnoremap K 10k
+nnoremap H 0
+nnoremap L $
+inoremap jj <ESC>
+
 " ヤンクしておき、単語の上で cy で置換
-" nnoremap <silent> ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
-nnoremap <silent> cy   ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
-vnoremap <silent> cy   c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+nnoremap <silent> griw ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+nnoremap <silent> gr   ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+vnoremap <silent> gr   c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+
+"単語の上書きペースト
+"nnoremap <silent> rp ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 
 " Surround a word with quotes, single quotes, parens, brackets, braces, etc.
 "   requires and powered by the plugin surround.vim :-)
@@ -77,9 +88,6 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
-
-nnoremap J 10j
-nnoremap K 10k
 
 " gS prefix is added for ViEmu, no use for VsVim AFAIK.
 "VsVim and ViEmu are disabled until PeasyMotion finishes
