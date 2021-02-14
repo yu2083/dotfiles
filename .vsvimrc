@@ -28,8 +28,8 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
 
-nnoremap J 10j
-nnoremap K 10k
+noremap J 10j
+noremap K 10k
 nnoremap H 0
 nnoremap L $
 inoremap jj <ESC>
