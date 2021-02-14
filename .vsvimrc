@@ -30,8 +30,8 @@ map <leader>t<leader> :tabnext
 
 noremap J 10j
 noremap K 10k
-nnoremap H 0
-nnoremap L $
+noremap H 0
+noremap L $
 inoremap jj <ESC>
 
 " ヤンクしておき、単語の上で cy で置換
